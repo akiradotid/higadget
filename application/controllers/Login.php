@@ -79,9 +79,9 @@ class Login extends CI_Controller
     if (!empty($data['lastID'])) {
       $numericPart = isset($data['lastID'][0]['id_user']) ? preg_replace('/[^0-9]/', '', $data['lastID'][0]['id_user']) : '';
       $incrementedNumericPart = sprintf('%04d', intval($numericPart) + 1);
-      $data['newID'] = 'HIEMP-' . $incrementedNumericPart;
+      $data['newID'] = 'HGEMP-' . $incrementedNumericPart;
     }else{
-      $data['newID'] = 'HIEMP-0001';
+      $data['newID'] = 'HGEMP-0001';
     }
     return $data['newID'];
     // $this->output->set_content_type('application/json')->set_output(json_encode($data));

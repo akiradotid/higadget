@@ -58,7 +58,7 @@
                         <!-- ID Karyawan -->
                         <div class="col-md-6 position-relative">
                           <label class="form-label" for="FormIDKaryawan">ID Karyawan</label>
-                          <input class="form-control" id="e_id" name="e_id" type="text" placeholder="HIEMP-0001" required="" readonly>
+                          <input class="form-control" id="e_id" name="e_id" type="text" placeholder="HGEMP-0001" required="" readonly>
                           <div class="valid-tooltip">Looks good!</div>
                         </div>
                         <!-- Nama Karyawan -->

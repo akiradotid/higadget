@@ -15,9 +15,9 @@ class MasterKaryawan extends Auth
     if (!empty($lastID)) {
         $numericPart = preg_replace('/[^0-9]/', '', $lastID); // Extract numeric part
         $incrementedNumericPart = sprintf('%04d', intval($numericPart) + 1); // Increment numeric part
-        $newID = 'HIEMP-' . $incrementedNumericPart;
+        $newID = 'HGEMP-' . $incrementedNumericPart;
     } else {
-        $newID = 'HIEMP-0001';
+        $newID = 'HGEMP-0001';
     }
     return $newID;
   }
