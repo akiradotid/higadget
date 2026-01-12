@@ -336,8 +336,8 @@
                       </ul>
                   </li>
                   <!-- Finance -->
-                  <li class="sidebar-list purchase"><i class="fa fa-thumb-tack"></i>
-                      <a class="sidebar-link sidebar-title purchase" href="#">
+                  <li class="sidebar-list finance"><i class="fa fa-thumb-tack"></i>
+                      <a class="sidebar-link sidebar-title finance" href="#">
                           <svg class="stroke-icon">
                           <use href="<?=base_url()?>assets/svg/icon-sprite.svg#expense"></use>
                           </svg>
@@ -614,6 +614,12 @@
                 $(".sidebar-list.purchase").addClass('active');
                 $(".sidebar-list.purchase .sidebar-title").find('.according-menu i').removeClass('fa-angle-right').addClass('fa-angle-down');
                 $(".sidebar-list.purchase ul.sidebar-submenu").slideDown('normal');
+            }else if (segment1 == "pendapatan"){
+                $(".finance").addClass("active");
+                $(".fnin").addClass("active");
+                $(".sidebar-list.finance").addClass('active');
+                $(".sidebar-list.finance .sidebar-title").find('.according-menu i').removeClass('fa-angle-right').addClass('fa-angle-down');
+                $(".sidebar-list.finance ul.sidebar-submenu").slideDown('normal');
             }
             $(document).on('select2:open', () => {
                 document.querySelector('.select2-search__field').focus();
