@@ -348,8 +348,8 @@
                       <ul class="sidebar-submenu">
                           <li class="fnin"><a class="fnin" href="<?=base_url()?>pendapatan/">Pendapatan Lainnya</a></li>
                           <li class="fnot"><a class="fnot" href="<?=base_url()?>pengeluaran/">Pengeluaran</a></li>
-                          <li class="fnot"><a class="fnot" href="<?=base_url()?>laporan-bulanan/">Laporan Bulanan</a></li>
-                          <li class="fnot"><a class="fnot" href="<?=base_url()?>laporan-tahunan/">Laporan Tahunan</a></li>
+                          <li class="fnlb"><a class="fnlb" href="<?=base_url()?>laporan-bulanan/">Laporan Bulanan</a></li>
+                          <li class="fnlt"><a class="fnlt" href="<?=base_url()?>laporan-tahunan/">Laporan Tahunan</a></li>
                           <!-- <li class="lfn1"><a class="lfn1" href="<?=base_url()?>laporan-buku-besar/">Laporan Buku Besar</a></li>
                           <li class="lfn1"><a class="lfn1" href="<?=base_url()?>laporan-neraca/">Laporan Neraca</a></li>
                           <li class="lfn1"><a class="lfn1" href="<?=base_url()?>laporan-laba-rugi/">Laporan Laba Rugi</a></li>
@@ -617,6 +617,27 @@
             }else if (segment1 == "pendapatan"){
                 $(".finance").addClass("active");
                 $(".fnin").addClass("active");
+                $(".sidebar-list.finance").addClass('active');
+                $(".sidebar-list.finance .sidebar-title").find('.according-menu i').removeClass('fa-angle-right').addClass('fa-angle-down');
+                $(".sidebar-list.finance ul.sidebar-submenu").slideDown('normal');
+            }
+						else if (segment1 == "pengeluaran"){
+                $(".finance").addClass("active");
+                $(".fnot").addClass("active");
+                $(".sidebar-list.finance").addClass('active');
+                $(".sidebar-list.finance .sidebar-title").find('.according-menu i').removeClass('fa-angle-right').addClass('fa-angle-down');
+                $(".sidebar-list.finance ul.sidebar-submenu").slideDown('normal');
+            }
+						else if (segment1 == "laporan-bulanan"){
+                $(".finance").addClass("active");
+                $(".fnlb").addClass("active");
+                $(".sidebar-list.finance").addClass('active');
+                $(".sidebar-list.finance .sidebar-title").find('.according-menu i').removeClass('fa-angle-right').addClass('fa-angle-down');
+                $(".sidebar-list.finance ul.sidebar-submenu").slideDown('normal');
+            }
+						else if (segment1 == "pengeluaran-tahunan"){
+                $(".finance").addClass("active");
+                $(".fnlt").addClass("active");
                 $(".sidebar-list.finance").addClass('active');
                 $(".sidebar-list.finance .sidebar-title").find('.according-menu i').removeClass('fa-angle-right').addClass('fa-angle-down');
                 $(".sidebar-list.finance ul.sidebar-submenu").slideDown('normal');
