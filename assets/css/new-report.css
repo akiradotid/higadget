@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    color: #000;
+}
+
+.container {
+    width: 1000px;
+    margin: 20px auto;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin: 4px 0;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+table.neraca {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+table.neraca th,
+table.neraca td {
+    border: 1px solid #000;
+    padding: 6px;
+    vertical-align: middle;
+}
+
+table.neraca thead th {
+    background: #cfcfcf;
+    text-align: center;
+    font-weight: bold;
+}
+
+.section td {
+    background: #e6e6e6;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.subsection {
+    font-weight: bold;
+}
+
+.indent {
+    padding-left: 20px;
+}
+
+.amount {
+    text-align: right;
+}
+
+.subtotal td {
+    font-weight: bold;
+}
+
+.total td {
+    font-weight: bold;
+    border-top: 2px solid #000;
+}
+
+.footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.double-indent {
+    padding-left: 40px;
+}
