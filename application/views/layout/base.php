@@ -635,7 +635,7 @@
                 $(".sidebar-list.finance .sidebar-title").find('.according-menu i').removeClass('fa-angle-right').addClass('fa-angle-down');
                 $(".sidebar-list.finance ul.sidebar-submenu").slideDown('normal');
             }
-						else if (segment1 == "pengeluaran-tahunan"){
+						else if (segment1 == "laporan-tahunan"){
                 $(".finance").addClass("active");
                 $(".fnlt").addClass("active");
                 $(".sidebar-list.finance").addClass('active');
