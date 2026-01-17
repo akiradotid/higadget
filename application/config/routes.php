@@ -85,6 +85,13 @@ $route['pengeluaran/update-data']='Pengeluaran/updatepost';
 $route['pengeluaran/hapus/(:any)'] = 'Pengeluaran/deletepost/$1';
 $route['pengeluaran/edit/(:any)'] = 'Pengeluaran/edit/$1';
 
+$route['buku-kas']='BukuKas';
+$route['buku-kas/jsonkas']='BukuKas/jsonkas';
+$route['buku-kas/simpan-data']='BukuKas/createpost';
+$route['buku-kas/update-data']='BukuKas/updatepost';
+$route['buku-kas/hapus/(:any)'] = 'BukuKas/deletepost/$1';
+$route['buku-kas/edit/(:any)/(:any)'] = 'BukuKas/edit/$1/$2';
+
 $route['laporan-bulanan']='LaporanKeuangan';
 $route['laporan-tahunan']='LaporanKeuangan/tahunan';
 $route['laporan-neraca']='LaporanKeuangan/neraca';
