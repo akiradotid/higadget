@@ -208,7 +208,7 @@ function getid() {
                     $("#e_alamat").val(item.alamat);
                     $("#e_wa").val(item.no_wa);
                     $("#oldfile").val(item.file_cv);
-                    $("#filecv_filename").attr("href", base_url+"assets/dhdokumen/karyawan/" + item.file_cv);
+                    $("#filecv_filename").attr("href", base_url+"assets/higadget/karyawan/" + item.file_cv);
                     $("#filecv").text(item.file_cv);
                     $("#e_jabatan").empty().append('<option value="' + item.jabatan + '">' +item.jabatan+ '</option>').trigger('change.select2');
                     $("#e_role").empty().append('<option value="' + item.role_user + '">' +item.role_user+ '</option>').trigger('change.select2');
@@ -377,7 +377,7 @@ function reload() {
                 "render": function (data, type, row) {
                     if (type === 'display' && data !== null && data !== "") {
                         // Assuming 'data' is the filename (e.g., 'sample.pdf')
-                        var pdfLink = '<a class="pdf" href="' + base_url + 'assets/dhdokumen/karyawan/' + data + '" target="_blank">' +
+                        var pdfLink = '<a class="pdf" href="' + base_url + 'assets/higadget/karyawan/' + data + '" target="_blank">' +
                             '<i class="icofont icofont-file-pdf">'+ data +'</i>' +
                             '</a>';
                         return pdfLink;

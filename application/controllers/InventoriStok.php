@@ -135,11 +135,11 @@ class InventoriStok extends Auth
 
     // Menentukan jalur penyimpanan gambar berdasarkan lingkungan
     if ($_SERVER['SERVER_NAME'] == 'localhost') {
-        $imagePath = './assets/dhdokumen/snbarcode/';
+        $imagePath = './assets/higadget/snbarcode/';
     } else if ($_SERVER['SERVER_NAME'] == 'live.akira.id') {
-        $imagePath = $_SERVER['DOCUMENT_ROOT'] . '/dev-dhtech/assets/dhdokumen/snbarcode/';
+        $imagePath = $_SERVER['DOCUMENT_ROOT'] . '/dev-dhtech/assets/higadget/snbarcode/';
     } else {
-        $imagePath = $_SERVER['DOCUMENT_ROOT'] . '/assets/dhdokumen/snbarcode/';
+        $imagePath = $_SERVER['DOCUMENT_ROOT'] . '/assets/higadget/snbarcode/';
     }
 
     // Nama file gambar
@@ -234,7 +234,7 @@ class InventoriStok extends Auth
     $result = $getsn->row(); // Fetch the single row
     $sn_brg = $result->sn_brg; // Extract the 'sn_brg' value
     $deleteResult = $this->InventoriStok_model->delete($id);
-    $imagePath = './assets/dhdokumen/snbarcode/';
+    $imagePath = './assets/higadget/snbarcode/';
     $fileName = $imagePath . $sn_brg . '.jpg';
     if (file_exists($fileName)) {
         unlink($fileName);

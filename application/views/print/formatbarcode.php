@@ -64,7 +64,7 @@
             <tr>
                 <td>
                     <h6><?php echo $product['nama_brg']; ?></h6>
-                    <img src="<?= base_url() ?>assets/dhdokumen/snbarcode/<?php echo $product['sn_brg']; ?>.jpg" alt="Product Image">
+                    <img src="<?= base_url() ?>assets/higadget/snbarcode/<?php echo $product['sn_brg']; ?>.jpg" alt="Product Image">
                 </td>
             </tr>
         <?php endforeach; ?>

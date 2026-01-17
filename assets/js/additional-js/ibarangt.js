@@ -370,7 +370,7 @@ function detailsk(sk) {
                   // You can customize the rendering of the image here
                   if (type === "display") {
                       if (data) {
-                          return `<img class="img-fluid table-avtar img-90" src="${base_url+'assets/dhdokumen/snbarcode/'+data+'.jpg'}" alt="Image" loading="lazy">`;
+                          return `<img class="img-fluid table-avtar img-90" src="${base_url+'assets/higadget/snbarcode/'+data+'.jpg'}" alt="Image" loading="lazy">`;
                       } else {
                           return "No Image";
                       }
@@ -508,7 +508,7 @@ function detailsp(sp) {
                   // You can customize the rendering of the image here
                   if (type === "display") {
                       if (data) {
-                          return `<img class="img-fluid table-avtar img-90" src="${base_url+'assets/dhdokumen/snbarcode/'+data+'.jpg'}" alt="Image" loading="lazy">`;
+                          return `<img class="img-fluid table-avtar img-90" src="${base_url+'assets/higadget/snbarcode/'+data+'.jpg'}" alt="Image" loading="lazy">`;
                       } else {
                           return "No Image";
                       }

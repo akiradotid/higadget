@@ -57,7 +57,7 @@
                         <td width="200">Nomor Surat</td>
                         <td>: <?=$gsk['no_surat_keluar']?></td>
                         <td rowspan="6" style="vertical-align: top; text-align: right;">
-                            <img style="margin:12px;" src="<?=base_url()?>assets/dhdokumen/suratkeluarbarcode/<?=$gsk['no_surat_keluar']?>.jpg" alt="">
+                            <img style="margin:12px;" src="<?=base_url()?>assets/higadget/suratkeluarbarcode/<?=$gsk['no_surat_keluar']?>.jpg" alt="">
                         </td>
                     </tr>
                     <tr>

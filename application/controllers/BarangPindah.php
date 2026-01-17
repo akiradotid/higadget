@@ -222,11 +222,11 @@ class BarangPindah extends Auth
     $imageResource = Zend_Barcode::factory('code128','image', array('text'=>$sp), array())->draw();
     $imageName = $sp.'.jpg';
       if ($_SERVER['SERVER_NAME'] == 'localhost') {
-        $imagePath = './assets/dhdokumen/suratpindahbarcode/';
+        $imagePath = './assets/higadget/suratpindahbarcode/';
       } else if($_SERVER['SERVER_NAME'] == 'live.akira.id'){
-        $imagePath = $_SERVER['DOCUMENT_ROOT'] . '/dev-dhtech/assets/dhdokumen/suratpindahbarcode/';
+        $imagePath = $_SERVER['DOCUMENT_ROOT'] . '/dev-dhtech/assets/higadget/suratpindahbarcode/';
       } else {
-        $imagePath = $_SERVER['DOCUMENT_ROOT'] . '/assets/dhdokumen/suratpindahbarcode/';
+        $imagePath = $_SERVER['DOCUMENT_ROOT'] . '/assets/higadget/suratpindahbarcode/';
       }
     imagejpeg($imageResource, $imagePath.$imageName);    
   }

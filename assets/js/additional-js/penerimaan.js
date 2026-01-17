@@ -474,7 +474,7 @@ function detailbrg() {
                     var tgl_keluar = item.tgl_keluar;
                     var datePart = tgl_keluar.split(' ')[0];
                     var timePart = tgl_keluar.split(' ')[1];
-                    $('#bardh').attr('src', base_url+'assets/dhdokumen/snbarcode/'+item.sn_brg+'.jpg').css('width', '100px');
+                    $('#bardh').attr('src', base_url+'assets/higadget/snbarcode/'+item.sn_brg+'.jpg').css('width', '100px');
                     $('#dhsn').text(item.sn_brg);
                     $('#H3TSUPP').text(item.nama_supplier);
                     $('#dhnm').text(item.nama_brg);
