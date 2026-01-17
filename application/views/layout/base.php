@@ -310,11 +310,11 @@
                         <!-- <li class="idaf"><a class="idaf" href="<?=base_url()?>daftar-inventori">Daftar Inventori</a></li> -->
                         <?php if ($jab=='OWNER' || $jab=='Finance' || $jab=='Manager Oprasional') { ?> 
                         <li class="ibm"><a class="ibm" href="<?=base_url()?>barang-masuk">Barang Gudang</a></li>
-                        <li class="ibk"><a class="ibk" href="<?=base_url()?>barang-keluar">Barang Cabang</a></li>
+                        <!-- <li class="ibk"><a class="ibk" href="<?=base_url()?>barang-keluar">Barang Cabang</a></li> -->
                         <?php } ?>
                         <?php if ($jab=='OWNER' || $jab=='KEPALA CABANG') { ?>
-                        <li class="iskb"><a class="iskb" href="<?=base_url()?>terima-barang">Terima Barang Cabang</a></li>
-                        <li class="ipb"><a class="ipb" href="<?=base_url()?>pindah-barang">Pindah Barang Cabang</a></li>
+                        <!-- <li class="iskb"><a class="iskb" href="<?=base_url()?>terima-barang">Terima Barang Cabang</a></li>
+                        <li class="ipb"><a class="ipb" href="<?=base_url()?>pindah-barang">Pindah Barang Cabang</a></li> -->
                         <li class="iso"><a class="iso" href="<?=base_url()?>stock-opname">Stok Opname Cabang</a></li>
                         <?php } ?>
                     </ul>
@@ -335,6 +335,7 @@
                           <li class="sprd"><a class="sprd" href="<?=base_url()?>penerimaan/">Penerimaan</a></li>
                       </ul>
                   </li>
+                  <?php if ($jab=='OWNER') { ?>
                   <!-- Finance -->
                   <li class="sidebar-list finance"><i class="fa fa-thumb-tack"></i>
                       <a class="sidebar-link sidebar-title finance" href="#">
@@ -348,6 +349,7 @@
                       <ul class="sidebar-submenu">
                           <li class="fnin"><a class="fnin" href="<?=base_url()?>pendapatan/">Pendapatan Lainnya</a></li>
                           <li class="fnot"><a class="fnot" href="<?=base_url()?>pengeluaran/">Pengeluaran</a></li>
+                          <li class="fnbk"><a class="fnbk" href="<?=base_url()?>buku-kas/">Kas</a></li>
                           <li class="fnlb"><a class="fnlb" href="<?=base_url()?>laporan-bulanan/">Laporan Bulanan</a></li>
                           <li class="fnlt"><a class="fnlt" href="<?=base_url()?>laporan-tahunan/">Laporan Tahunan</a></li>
                           <!-- <li class="lfn1"><a class="lfn1" href="<?=base_url()?>laporan-buku-besar/">Laporan Buku Besar</a></li>
@@ -357,6 +359,7 @@
                           <li class="lfn1"><a class="lfn1" href="<?=base_url()?>laporan-inventaris/">Laporan Inventaris <br/>(Aktiva Tetap)</a></li> -->
                       </ul>
                   </li>
+                  <?php } ?>
                   <!-- Penjualan -->
                   <li class="sidebar-list sales"><i class="fa fa-thumb-tack"></i>
                       <a class="sidebar-link sidebar-title sales" href="#">
@@ -596,7 +599,7 @@
                 $(".submenu-title.fnc").addClass('active'); 
                 $(".submenu-title.fnc").find('.according-menu i').removeClass('fa-angle-right').addClass('fa-angle-down');
                 $(".submenu-title.fnc + .submenu-content").slideDown('normal');
-            }else if (segment1 == "pembelian"){
+            }else if (segment1 == "pembelian" || segment1 == "pembelian-input"){
                 $(".purchase").addClass("active");
                 $(".scst").addClass("active");
                 $(".sidebar-list.purchase").addClass('active');
@@ -631,6 +634,13 @@
 						else if (segment1 == "laporan-bulanan"){
                 $(".finance").addClass("active");
                 $(".fnlb").addClass("active");
+                $(".sidebar-list.finance").addClass('active');
+                $(".sidebar-list.finance .sidebar-title").find('.according-menu i').removeClass('fa-angle-right').addClass('fa-angle-down');
+                $(".sidebar-list.finance ul.sidebar-submenu").slideDown('normal');
+            }
+						else if (segment1 == "buku-kas"){
+                $(".finance").addClass("active");
+                $(".fnbk").addClass("active");
                 $(".sidebar-list.finance").addClass('active');
                 $(".sidebar-list.finance .sidebar-title").find('.according-menu i').removeClass('fa-angle-right').addClass('fa-angle-down');
                 $(".sidebar-list.finance ul.sidebar-submenu").slideDown('normal');
