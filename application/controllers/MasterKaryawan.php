@@ -134,7 +134,7 @@ class MasterKaryawan extends Auth
     $gaji = str_replace('.', '', $this->input->post('gaji'));
     $cv = "";
         
-    $file_path = realpath(APPPATH . '../assets/dhdokumen/karyawan');
+    $file_path = realpath(APPPATH . '../assets/higadget/karyawan');
     $config['upload_path'] = $file_path;
     $config['allowed_types'] = 'pdf';
     $config['overwrite'] = true;
@@ -193,7 +193,7 @@ class MasterKaryawan extends Auth
         'level'=>$this->input->post('erole'),
       ];
 
-      $file_path = realpath(APPPATH . '../assets/dhdokumen/karyawan');
+      $file_path = realpath(APPPATH . '../assets/higadget/karyawan');
       $config['upload_path'] = $file_path;
       $config['allowed_types'] = 'pdf';
       $config['overwrite'] = true;
@@ -235,7 +235,7 @@ class MasterKaryawan extends Auth
     if ($result['success'] && $result2['success'] && $result3['success']) {
       foreach ($image as $i) {
         if (!empty($i['file_cv'])) {
-          $filePath = realpath(APPPATH . '../assets/dhdokumen/karyawan') . '/' . $i['file_cv'];
+          $filePath = realpath(APPPATH . '../assets/higadget/karyawan') . '/' . $i['file_cv'];
           if (file_exists($filePath)) {
               unlink($filePath);
           }
