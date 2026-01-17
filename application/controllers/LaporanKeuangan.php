@@ -99,8 +99,15 @@ class LaporanKeuangan extends Auth
     $bulan = $this->input->get('bulan');
     $tahun = $this->input->get('tahun');
 
-    $date_start = $tahun . '-' . $bulan . '-01';
-    $date_end = date("Y-m-t", strtotime($date_start));
+    if(!empty($bulan)) {
+        $date_start = $tahun . '-' . $bulan . '-01';
+        $date_end = date("Y-m-t", strtotime($date_start));
+    }else{
+        $bulan = '01';
+        $date_start = $tahun . '-01-01';
+        $date_end = $tahun . '-12-31';
+    }
+
 
     $data['date_start'] = $date_start;
     $data['date_end'] = $date_end;
@@ -142,14 +149,26 @@ class LaporanKeuangan extends Auth
     $bulan = $this->input->get('bulan');
     $tahun = $this->input->get('tahun');
 
-    $date_start = $tahun . '-' . $bulan . '-01';
-    $date_end = date("Y-m-t", strtotime($date_start));
+    if(!empty($bulan)) {
+        $date_start = $tahun . '-' . $bulan . '-01';
+        $date_end = date("Y-m-t", strtotime($date_start));
+
+        $kas_bulan_awal = $this->Mbukukas_model->getWhere($bulan, $tahun);
+        $kas_bulan_akhir = $kas_bulan_awal;
+    }else{
+        $bulan = '01';
+        $date_start = $tahun . '-01-01';
+        $date_end = $tahun . '-12-31';
+
+        $kas_bulan_awal = $this->Mbukukas_model->getWhere('01', $tahun);
+        $kas_bulan_akhir = $this->Mbukukas_model->getWhere('12', $tahun);
+    }
+
 
     $data['date_start'] = $date_start;
     $data['date_end'] = $date_end;
 
-    $kas_bulan_ini = $this->Mbukukas_model->getWhere($bulan, $tahun);
-    $data['saldo_awal'] = $kas_bulan_ini ? $kas_bulan_ini[0]['saldo_awal'] : 0;
+    $data['saldo_awal'] = $kas_bulan_awal ? $kas_bulan_awal[0]['saldo_awal'] : 0;
 
     $data['data_penjualan'] = $this->LaporanKeuangan_model->laporan_penjualan($date_start, $date_end);
     $data['data_pembelian'] = $this->LaporanKeuangan_model->laporan_pembelian($date_start, $date_end);
@@ -182,7 +201,7 @@ class LaporanKeuangan extends Auth
     }
     $data['data_pengeluaran_per_kategori'] = $group_data_pengeluaran;
 
-    $data['saldo_akhir'] = $kas_bulan_ini ? $kas_bulan_ini[0]['saldo_akhir'] : 0;
+    $data['saldo_akhir'] = $kas_bulan_akhir ? $kas_bulan_akhir[0]['saldo_akhir'] : 0;
 
     $this->load->view('laporan-keuangan/buku-besar', $data);
   }
@@ -194,8 +213,15 @@ class LaporanKeuangan extends Auth
     $bulan = $this->input->get('bulan');
     $tahun = $this->input->get('tahun');
 
-    $date_start = $tahun . '-' . $bulan . '-01';
-    $date_end = date("Y-m-t", strtotime($date_start));
+    if(!empty($bulan)) {
+        $date_start = $tahun . '-' . $bulan . '-01';
+        $date_end = date("Y-m-t", strtotime($date_start));
+    }else{
+        $bulan = '01';
+        $date_start = $tahun . '-01-01';
+        $date_end = $tahun . '-12-31';
+    }
+
 
     $data['date_start'] = $date_start;
     $data['date_end'] = $date_end;
@@ -252,8 +278,15 @@ class LaporanKeuangan extends Auth
     $bulan = $this->input->get('bulan');
     $tahun = $this->input->get('tahun');
 
-    $date_start = $tahun . '-' . $bulan . '-01';
-    $date_end = date("Y-m-t", strtotime($date_start));
+    if(!empty($bulan)) {
+        $date_start = $tahun . '-' . $bulan . '-01';
+        $date_end = date("Y-m-t", strtotime($date_start));
+    }else{
+        $bulan = '01';
+        $date_start = $tahun . '-01-01';
+        $date_end = $tahun . '-12-31';
+    }
+
 
     $data['date_start'] = $date_start;
     $data['date_end'] = $date_end;
@@ -299,8 +332,15 @@ class LaporanKeuangan extends Auth
     $bulan = $this->input->get('bulan');
     $tahun = $this->input->get('tahun');
 
-    $date_start = $tahun . '-' . $bulan . '-01';
-    $date_end = date("Y-m-t", strtotime($date_start));
+    if(!empty($bulan)) {
+        $date_start = $tahun . '-' . $bulan . '-01';
+        $date_end = date("Y-m-t", strtotime($date_start));
+    }else{
+        $bulan = '01';
+        $date_start = $tahun . '-01-01';
+        $date_end = $tahun . '-12-31';
+    }
+
 
     $data['date_start'] = $date_start;
     $data['date_end'] = $date_end;
